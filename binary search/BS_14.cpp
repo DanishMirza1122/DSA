@@ -4,7 +4,7 @@ using namespace std;
         int n=nums.size();
         int m=*max_element(nums.begin(),nums.end());
         int low=1, high=m;
-        int ans=0;
+        int ans= 0;
         while(low<=high){
             int mid=(low+high)/2;
             int target=0;
