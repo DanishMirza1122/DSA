@@ -22,5 +22,5 @@ int main(){
         cin>>x;
         nums.push_back(x);
     }
-    cout<<(nums,8);
+    cout<<findKthPositive(nums,8);
 }
