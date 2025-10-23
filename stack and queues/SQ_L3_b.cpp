@@ -23,7 +23,7 @@ string rev(string str){
 }
 void infixtoprefix(string s){
     rev(s);
-    stack<int> st;
+    stack<char> st;
     string ans;
     for(int i=0;i<s.size();i++){
         char c=s[i];
