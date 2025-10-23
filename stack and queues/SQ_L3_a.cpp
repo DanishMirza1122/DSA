@@ -25,9 +25,17 @@ void infixtopostfix(string s){
             st.pop();
         }
         else{
-            while(!st.empty() && priority(c)<=priority(st.top())){
+            if(c=='^'){
+                while(!st.empty() && priority(c)<=priority(st.top())){
                 ans+=st.top();
                 st.pop();
+                }
+            }
+            else{
+                while(!st.empty() && priority(c)< priority(st.top())){
+                ans+=st.top();
+                st.pop();
+                }
             }
             st.push(c);
         }
