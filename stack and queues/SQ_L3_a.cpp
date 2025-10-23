@@ -9,7 +9,7 @@ int priority(char c){
     else return 0;
 }
 void infixtopostfix(string s){
-    stack<int> st;
+    stack<char> st;
     string ans;
     for(int i=0;i<s.size();i++){
         char c=s[i];
