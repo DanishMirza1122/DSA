@@ -11,7 +11,7 @@ class MinStack {
       mini = INT_MAX;
     }
 
-  void push(int value) {
+  void Push(int value) {
     long long val = value;
     if (st.empty()) {
       mini = val;
@@ -26,17 +26,19 @@ class MinStack {
     }
   }
 
-  void pop() {
+  int Pop() {
     if (st.empty()) return;
     long long el = st.top();
     st.pop();
 
     if (el < mini) {
       mini = 2 * mini - el;
+      return mini;
     }
+    else return el;
   }
 
-  int top() {
+  int Top() {
     if (st.empty()) return -1;
 
     long long el = st.top();
@@ -48,3 +50,13 @@ class MinStack {
     return mini;
   }
 };
+int main() {
+  MinStack s;
+  s.Push(3);
+  s.Push(2);
+  s.Push(4);
+  s.Push(1);
+  cout << "Top of the stack: " << s.Top() << endl;
+  cout << "The deleted element is: " << s.Pop() << endl;
+  cout << "Top of the stack after removing element: " << s.Top() << endl;
+}
