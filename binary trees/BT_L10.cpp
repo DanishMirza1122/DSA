@@ -11,7 +11,7 @@ struct TreeNode
 };
 vector<int> inordertraversal(TreeNode* root){
     vector<int> ans;
-    if(root==NULL) return ans;
+    if(root==NULL) return ans;  
     stack<TreeNode*> st;
     st.push(root);
     while(!st.empty()){
